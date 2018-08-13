@@ -1,8 +1,8 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
-public class multiplicationTest {
+public class DollarTest {
     @Test
     public void testMultiplication() {
         Dollar five = new Dollar(5);
