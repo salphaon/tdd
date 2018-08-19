@@ -29,11 +29,15 @@ class Money implements Expression {
                 && currency().equals(money.currency());
     }
 
-    Money plus(Money addend) {
-        return new Money(10, addend.currency());
+    Expression plus(Money addend) {
+        return new Sum(this, addend);
     }
 
     public String toString() {
         return amount + " " + currency;
+    }
+
+    public Money reduce(String to) {
+        return this;
     }
 }
