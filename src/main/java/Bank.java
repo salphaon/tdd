@@ -11,8 +11,8 @@ public class Bank {
         rates.put(new Pair(from, to), rate);
     }
 
-    int rate(String from, String to) {
+    public int rate(String from, String to) {
         if (from.equals(to)) return 1;
-        return (Integer) rates.get(new Pair(from, to));
+        return (int) rates.get(new Pair(from, to));
     }
 }
